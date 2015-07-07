@@ -66,7 +66,7 @@ Contents of directory
        network or user.
 
   - ``resources.qrc|py`` Qt resource file and 'compiled' Python module. Use the
-    ``paver qrc`` command to generate the ``resources.py`` module, if you have
+    ``paver qrcs`` command to generate the ``resources.py`` module, if you have
     edited the ``resources.qrc`` file.
 
   - ``scripts`` Population scripts that work as standalone utilities, meant to
