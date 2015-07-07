@@ -13,19 +13,20 @@ Plugin Usage
 
 Upon app initialization completion (semi-automated population), user will be
 prompted to enter a NEW  authentication master password, or enter their CURRENT
-one. See `populateauthsystem/qgis_auth_system.py` comments for details on
+one. See ``populateauthsystem/qgis_auth_system.py`` comments for details on
 setting variables for automation.
 
-User can manually run plugin selecting the following menu: `Plugins -> Populate Authentication System -> Manual run`. This allows for new PKI components to be
+User can manually run plugin selecting the following menu: ``Plugins -> Populate Authentication System -> Manual run``. This allows for new PKI components to be
 populated, optionally replacing existing ones.
 
 Contents of directory
 ---------------------
 
-- `pavement.py` A build script for installing, packaging plugin and building its
-  documentation. Uses the `Paver`_ build tool, which must be installed first.
+- ``pavement.py`` A build script for installing, packaging plugin and building
+  its documentation. Uses the `Paver`_ build tool, which must be installed first.
 
-  Tasks from `pavement.py` (run with `paver <task name>`, e.g. `paver html`)::
+  Tasks from ``pavement.py`` (run with ``paver <task name>``, e.g.
+  ``paver html``)::
 
     html               - build documentation and install it into plugin/help
     install            - install plugin to qgis
@@ -35,26 +36,26 @@ Contents of directory
     upload             - upload the package to the server
 
 
-- `doc` Documentation for the plugin (incomplete), built using the `Sphinx`_
-  Python documentaion tool. Use `paver html` command.
+- ``doc`` Documentation for the plugin (incomplete), built using the `Sphinx`_
+  Python documentaion tool. Use ``paver html`` command.
 
-- `populateauthsystem` The plugin directory. Installed in normal PyQGIS location
-  as defined in `QGIS documentation`_. Use the `paver install` command during
-  development.
+- ``populateauthsystem`` The plugin directory. Installed in normal PyQGIS
+  location as defined in `QGIS documentation`_. Use the ``paver install``
+  command during development.
 
-  - `metadata.txt` Plugin information used by QGIS.
+  - ``metadata.txt`` Plugin information used by QGIS.
 
-  - `populate_auth_system.py` Main plugin file that runs at application
+  - ``populate_auth_system.py`` Main plugin file that runs at application
     initialization completion, and also loads a GUI menu item, under Plugins
     menu, for manually running plugin later.
 
-  - `populate_auth_system_dialog.py` Main GUI module that contains all logic for
-    communicating with user.
+  - ``populate_auth_system_dialog.py`` Main GUI module that contains all logic
+    for communicating with user.
 
-  - `populate_auth_system_dialog.ui` Qt Designer user interface file. This is
-    automatically loaded by the `populate_auth_system_dialog.py` module.
+  - ``populate_auth_system_dialog.ui`` Qt Designer user interface file. This is
+    automatically loaded by the ``populate_auth_system_dialog.py`` module.
 
-  - `qgis_auth_system.py` Interface module to the QGIS authentication system
+  - ``qgis_auth_system.py`` Interface module to the QGIS authentication system
     with a focus on populating PKI credentials, CA certificates, authentication
     configurations and, optionally, network and SSL configurations.
 
@@ -64,21 +65,21 @@ Contents of directory
        the desired result and the existing authentication requirements for the
        network or user.
 
-  - `resources.qrc|py` Qt resource file and 'compiled' Python module. Use the
-    `paver qrc` command to generate the `resources.py` module, if you have
-    edited the `resources.qrc` file.
+  - ``resources.qrc|py`` Qt resource file and 'compiled' Python module. Use the
+    ``paver qrc`` command to generate the ``resources.py`` module, if you have
+    edited the ``resources.qrc`` file.
 
-  - `scripts` Population scripts that work as standalone utilities, meant to be
-    run from a Terminal/Console environment. See `README.txt` in folder.
+  - ``scripts`` Population scripts that work as standalone utilities, meant to
+    be run from a Terminal/Console environment. See ``README.txt`` in folder.
 
-  - `test` Unit and integration tests (incomplete).
+  - ``test`` Unit and integration tests (incomplete).
 
-    - `certs-keys` Sample PKI components.
+    - ``certs-keys`` Sample PKI components.
 
-    - `pki-import` Sample PKI components used by default in population
+    - ``pki-import`` Sample PKI components used by default in population
       semi-automated run (could be deleted, if set to be).
 
-- `README.rst` This file.
+- ``README.rst`` This file.
 
 .. _Paver: http://paver.github.io/paver/
 .. _Sphinx: http://sphinx-doc.org/
