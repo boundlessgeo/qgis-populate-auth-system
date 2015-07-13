@@ -74,10 +74,12 @@ Contents of directory
 
   - ``test`` Unit and integration tests (incomplete).
 
-    - ``certs-keys`` Sample PKI components.
+    - ``certs-keys`` Sample PKI components. The default password used in all
+      protected files is ``password``.
 
     - ``pki-import`` Sample PKI components used by default in population
-      semi-automated run (could be deleted, if set to be).
+      semi-automated run (could be deleted, if set to be). The default password 
+      used in all identities is ``password``.
 
 - ``README.rst`` This file.
 
