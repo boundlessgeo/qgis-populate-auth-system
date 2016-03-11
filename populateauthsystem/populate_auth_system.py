@@ -51,6 +51,13 @@ class PopulateAuthSystem:
         self.mw = iface.mainWindow()
         """:type : QMainWindow"""
 
+        try:
+            from tests import testerplugin
+            from qgistester.tests import addTestModule
+            addTestModule(testerplugin, 'PopulateAuthSystem')
+        except:
+            pass
+
         # initialize plugin directory
         self.plugin_dir = os.path.dirname(__file__)
 
