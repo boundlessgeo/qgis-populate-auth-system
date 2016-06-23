@@ -113,6 +113,13 @@ class PopulateAuthSystem:
         """Removes the plugin menu item and icon from QGIS GUI."""
         self.iface.removePluginMenu(self.title, self.action)
 
+        try:
+            from tests import testerplugin
+            from qgistester.tests import removeTestModule
+            removeTestModule(testerplugin, 'PopulateAuthSystem')
+        except:
+            pass
+
     def app_initialized(self):
         """
         Semi-automated pre-population with minimal user interaction, but only at
